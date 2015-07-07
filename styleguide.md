@@ -31,6 +31,8 @@ Tips are prefixed after each section with a `*`.
 ```
 **Notice how there is no need for an ending `/>` for self-closing elements in HTML5.*
 
+**Scripts are defined in the "head" and with the "defer" attribute, instead of placing scripts at the bottom of the "body" element.*
+
 ## Body element
 ```html
 <body>
