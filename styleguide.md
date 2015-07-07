@@ -14,7 +14,7 @@ Tips are prefixed after each section with a `*`.
 ```
 **Use lowercase for all tags, such as when defining the doctype.*
 
-## Head element
+## Head
 ```html
 <head>
   <title>Title</title>
@@ -33,7 +33,7 @@ Tips are prefixed after each section with a `*`.
 
 **Scripts are defined in the "head" and with the "defer" attribute, instead of placing scripts at the bottom of the "body" element.*
 
-## Body element
+## Body
 ```html
 <body>
   <header></header>
@@ -43,7 +43,7 @@ Tips are prefixed after each section with a `*`.
 ```
 **Semantic tags such as "header", "main", and "footer" help keep the markup modular and readable.*
 
-## Main element
+### Main
 ```html
 <main>
   <!-- sections -->
@@ -54,10 +54,14 @@ Tips are prefixed after each section with a `*`.
 
 **There can only be one "main" element defined.*
 
-## Form element
+### Header
 
-### Input element
+### Footer
 
-### Select element
+## Form
 
-### Textarea element
+### Input
+
+### Select
+
+### Textarea
