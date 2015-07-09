@@ -2,7 +2,7 @@
 
 The below documents how we should write markup for this project. Using best practices and the latest standards such as utilizing [HTML5 semantic markup](http://www.w3schools.com/html/html5_semantic_elements.asp) and following accessibility rules from [WCAG](http://webaim.org/standards/wcag/checklist) is essential. Making sure the markup is clean and modular is important when we have to later stylize and add JS logic on top of them.
 
-All HTML pages should be verified against the [W3C validator](http://validator.w3.org/) to ensure that the markup is well formed. This in and of itself is not directly indicative of good code, but it helps to weed out problems that are able to be tested via automation. It is no substitute for manual code review. (For other validators, see HTML Validation in the Codex.)
+All HTML pages should be verified against the [W3C validator](http://validator.w3.org/) to ensure that the markup is well formed. This in and of itself is not directly indicative of good code, but it helps to weed out problems that are able to be tested via automation. It is no substitute for manual code review. (For other validators, see HTML Validation in the Codex).
 
 Tips are prefixed after each section with a `*`.
 
@@ -27,11 +27,11 @@ Tips are prefixed after each section with a `*`.
 </body>
 </html>
 ```
-**Use lowercase for all tags, such as when defining the doctype.*
+Use lowercase for all tags, such as when defining the doctype. 
 
-**Notice how there is no need for an ending `/>` for self-closing elements in HTML5.*
+Notice how there is no need for an ending `/>` for self-closing elements in HTML5. 
 
-**Scripts are defined in the "head" and with the "defer" attribute, instead of placing scripts at the bottom of the "body" element.*
+Scripts are defined in the "head" and with the "defer" attribute, instead of placing scripts at the bottom of the "body" element.
 
 ## Body
 ```html
@@ -41,7 +41,7 @@ Tips are prefixed after each section with a `*`.
   <footer></footer>
 </body>
 ```
-**Semantic tags such as "header", "main", and "footer" help keep the markup modular and readable.*
+Semantic tags such as "header", "main", and "footer" help keep the markup modular and readable.
 
 ### Main
 ```html
@@ -50,11 +50,13 @@ Tips are prefixed after each section with a `*`.
   <section></section>
 </main>
 ```
-**Use "section" instead of a "div" to provide better semantic value.*
+Use "section" instead of a "div" to provide better semantic value.
 
-**There can only be one "main" element defined.*
+There can only be one "main" element defined.
 
 ### Header
+The header helps split the web application up into easily distinguishable parts, both in physical location and function. In this case, it serves as navigation. We would see this at the very top of the page.
+
 ```html
 <header>
   <nav>
@@ -63,9 +65,7 @@ Tips are prefixed after each section with a `*`.
   </nav>
 </header>
 ```
-**The header helps split the web application up into easily distinguishable parts, both in physical location and function. In this case, it serves as navigation. We would see this at the very top of the page.*
-
-**This element is not necessary when you are using `<h1>`'s or other heading elements because they already demonstrate that the content serves as the heading.*
+This element is not necessary when you are using `<h1>`'s or other heading elements because they already demonstrate that the content serves as the heading.
 
 ### Footer
 ```html
@@ -73,18 +73,21 @@ Tips are prefixed after each section with a `*`.
   Copyright &copy; 2015 - Circle of Children
 </footer>
 ```
-**There generally is only a need for one footer. In this case, it serves as showing copyright information. We would see this at the very bottom of the page.*
+There generally is only a need for one footer. In this case, it serves as showing copyright information. We would see this at the very bottom of the page.
 
 ## Form
+Each form contains a set of fieldsets which splits up each set of form inputs.
+
 ```html
 <form action="someurl" method="post">
   <!-- fieldsets -->
   <fieldset></fieldset>
 </form>
 ```
-**Each form contains a set of fieldsets which splits up each set of form inputs.*
 
 ### Input
+Each fieldset contains a set of labels, each of which holds an input and label pair. Each fieldset must have a legend which serves as a heading.
+
 ```html
 <fieldset>
   <legend>A Legend</legend>
@@ -107,9 +110,7 @@ Tips are prefixed after each section with a `*`.
   </label>
 </fieldset>
 ```
-**Each fieldset contains a set of labels, each of which holds an input and label pair. Each fieldset must have a legend which serves as a heading.*
-
-**Input validation should not be defined in the markup. Rather, it should live in JavaScript. The reason for this is the idea of "Separation of Concerns". The HTML only serves as markup, not logic.*
+Input validation should not be defined in the markup. Rather, it should live in JavaScript. The reason for this is the idea of "Separation of Concerns". The HTML only serves as markup, not logic.
 
 ## Indentation
 Don't indent inside html, body, script, or style. Indent inside head and all other elements.
