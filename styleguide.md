@@ -18,7 +18,7 @@ Tips are prefixed after each section with a `*`.
 
   <!-- stylesheets -->
   <link rel="stylesheet" href="something.css">
-  
+
   <!-- scripts -->
   <script src="something" defer></script>
 </head>
@@ -105,16 +105,62 @@ Append action items after a colon as in TODO: action item.
 ```
 
 ### Header
+```html
+<header>
+  <nav>
+    <a href="/somewhere">Somewhere</a>
+    <a href="/someplace">Someplace</a>
+  </nav>
+</header>
+```
+**The header helps split the web application up into easily distinguishable parts, both in physical location and function. In this case, it serves as navigation. We would see this at the very top of the page.*
+
+**This element is not necessary when you are using `<h1>`'s or other heading elements because they already demonstrate that the content serves as the heading.*
 
 ### Footer
+```html
+<footer>
+  Copyright &copy; 2015 - Circle of Children
+</footer>
+```
+**There generally is only a need for one footer. In this case, it serves as showing copyright information. We would see this at the very bottom of the page.*
 
 ## Form
+```html
+<form action="someurl" method="post">
+  <!-- fieldsets -->
+  <fieldset></fieldset>
+</form>
+```
+**Each form contains a set of fieldsets which splits up each set of form inputs.*
 
 ### Input
+```html
+<fieldset>
+  <legend>A Legend</legend>
 
-### Select
+  <!-- labels -->
+  <label for="someinput1">
+    Some Label
+    <input id="someinput1" type="text"> <!-- classic input -->
+  </label>
+  <label for="someinput2">
+    Some Label
+    <select id="someinput2"> <!-- select dropdown -->
+      <option value="0">Value 1</option>
+      <option value="1">Value 2</option>
+    </select>
+  </label>
+  <label for="someinput3">
+    Some Label
+    <textarea id="someinput3"></textarea> <!-- textarea input -->
+  </label>
+</fieldset>
+```
+**Each fieldset contains a set of labels, each of which holds an input and label pair. Each fieldset must have a legend which serves as a heading.*
 
-### Textarea
+**Input validation should not be defined in the markup. Rather, it should live in JavaScript. The reason for this is the idea of "Separation of Concerns". The HTML only serves as markup, not logic.*
 
+----
 
 For anything missing in this guide refer to [Google Style Guide](http://google.github.io/styleguide/htmlcssguide.xml)
