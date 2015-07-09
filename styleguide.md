@@ -23,12 +23,14 @@ Tips are prefixed after each section with a `*`.
   <script src="something" defer></script>
 </head>
 <body>
-<!-- Content -->
+  <!-- Content -->
 </body>
 </html>
 ```
 **Use lowercase for all tags, such as when defining the doctype.*
+
 **Notice how there is no need for an ending `/>` for self-closing elements in HTML5.*
+
 **Scripts are defined in the "head" and with the "defer" attribute, instead of placing scripts at the bottom of the "body" element.*
 
 ## Body
@@ -49,60 +51,8 @@ Tips are prefixed after each section with a `*`.
 </main>
 ```
 **Use "section" instead of a "div" to provide better semantic value.*
+
 **There can only be one "main" element defined.*
-
-### Indentation
-Don't indent inside html, body, script, or style. Indent inside head and all other elements.
-As with PHP, HTML indentation should always reflect logical structure. Use tabs and not spaces.
-When mixing PHP and HTML together, indent PHP blocks to match the surrounding HTML code. Closing PHP blocks should match the same indentation level as the opening block.
-
-### Elements and Attributes
-All element and attribute names should be lowercase. Attribute values should be
-quoted. Optional closing tags should be included. Self-closing elements should
-not be closed. Optional attributes should be omitted. Always include html, head,
-and body tags.
-
-No type or language attributes on script tags.
-No type attribute on link or style tags.
-```html
-  <script src=”...”></script>
-  <script></script>
-  <link rel=”stylesheet” href=”...”>
-  <style></style></style></script>
-```
-
-### Self-closing Elements
-All tags must be properly closed. For tags that can wrap nodes such as text or other elements, termination is a trivial enough task. For tags that are self-closing, the forward slash should have exactly one space preceding it:
-```html
-<br />
-```
-rather than the compact but incorrect:
-```html
-<br/>
-```
-The W3C specifies that a single space should precede the self-closing slash ([source](http://w3.org/TR/xhtml1/#C_2)).
-
-### Comments
-Comments
-Explain code as needed, where possible. What does it cover, what purpose does it serve, why is respective solution used or preferred? (This item is optional as it is not deemed a realistic expectation to always demand fully documented code. Mileage may vary heavily for HTML and CSS code and depends on the complexity.)
-
-### Action Items
-Mark todos and action items with TODO. Highlight todos by using the keyword TODO only, not other common formats like @@.
-
-Append a contact in parentheses as with the format TODO(contact).
-
-Append action items after a colon as in TODO: action item.
-
-```html
-<!-- TODO(john.doe): remove optional tags -->
-<ul>
-  <li>Apples</li>
-  <li>Oranges</li>
-</ul>
-
-</li>
-</ul></center>
-```
 
 ### Header
 ```html
@@ -160,6 +110,60 @@ Append action items after a colon as in TODO: action item.
 **Each fieldset contains a set of labels, each of which holds an input and label pair. Each fieldset must have a legend which serves as a heading.*
 
 **Input validation should not be defined in the markup. Rather, it should live in JavaScript. The reason for this is the idea of "Separation of Concerns". The HTML only serves as markup, not logic.*
+
+## Indentation
+Don't indent inside html, body, script, or style. Indent inside head and all other elements.
+As with PHP, HTML indentation should always reflect logical structure. Use tabs and not spaces.
+When mixing PHP and HTML together, indent PHP blocks to match the surrounding HTML code. Closing PHP blocks should match the same indentation level as the opening block.
+
+## Elements and Attributes
+All element and attribute names should be lowercase. Attribute values should be
+quoted. Optional closing tags should be included. Self-closing elements should
+not be closed. Optional attributes should be omitted. Always include html, head,
+and body tags.
+
+No type or language attributes on script tags.
+No type attribute on link or style tags.
+```html
+  <script src=”...”></script>
+  <script></script>
+  <link rel=”stylesheet” href=”...”>
+  <style></style></style></script>
+```
+
+## Self-closing Elements
+All tags must be properly closed. For tags that can wrap nodes such as text or other elements, termination is a trivial enough task. For tags that are self-closing, the forward slash should have exactly one space preceding it:
+```html
+<br />
+```
+rather than the compact but incorrect:
+```html
+<br/>
+```
+The W3C specifies that a single space should precede the self-closing slash ([source](http://w3.org/TR/xhtml1/#C_2)).
+
+## Comments
+Explain code as needed, where possible. What does it cover, what purpose does it serve, why is respective solution used or preferred? (This item is optional as it is not deemed a realistic expectation to always demand fully documented code. Mileage may vary heavily for HTML and CSS code and depends on the complexity.)
+
+It is important to remove all comments via an HTML preparer in the build process to production. Comments should help only developers divulge complicated code but not serve as documentation for outside users.
+
+### Action Items
+Mark todos and action items with TODO. Highlight todos by using the keyword TODO only, not other common formats like @@.
+
+Append a contact in parentheses as with the format TODO(contact).
+
+Append action items after a colon as in TODO: action item.
+
+```html
+<!-- TODO(john.doe): remove optional tags -->
+<ul>
+  <li>Apples</li>
+  <li>Oranges</li>
+</ul>
+
+</li>
+</ul></center>
+```
 
 ----
 
