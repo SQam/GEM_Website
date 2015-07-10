@@ -114,8 +114,7 @@ Input validation should not be defined in the markup. Rather, it should live in 
 
 ## Indentation
 Don't indent inside html, body, script, or style. Indent inside head and all other elements.
-As with PHP, HTML indentation should always reflect logical structure. Use tabs and not spaces.
-When mixing PHP and HTML together, indent PHP blocks to match the surrounding HTML code. Closing PHP blocks should match the same indentation level as the opening block.
+As with PHP, HTML indentation should always reflect logical structure. Use 2 spaces and not tabs.
 
 ## Elements and Attributes
 All element and attribute names should be lowercase. Attribute values should be
@@ -133,15 +132,30 @@ No type attribute on link or style tags.
 ```
 
 ## Self-closing Elements
-All tags must be properly closed. For tags that can wrap nodes such as text or other elements, termination is a trivial enough task. For tags that are self-closing, the forward slash should have exactly one space preceding it:
+All tags must be properly closed. For tags that can wrap nodes such as text or other elements, termination is a trivial enough task. For tags that are self-closing, they should be left without the closure per the html5 spec:
+```html
+<area>
+<base>
+<br>
+<col>
+<command>
+<embed>
+<hr>
+<img>
+<input>
+<keygen>
+<link>
+<meta>
+<param>
+<source>
+<track>
+<wbr>
+```
+rather than the incorrect:
 ```html
 <br />
-```
-rather than the compact but incorrect:
-```html
 <br/>
 ```
-The W3C specifies that a single space should precede the self-closing slash ([source](http://w3.org/TR/xhtml1/#C_2)).
 
 ## Comments
 Explain code as needed, where possible. What does it cover, what purpose does it serve, why is respective solution used or preferred? (This item is optional as it is not deemed a realistic expectation to always demand fully documented code. Mileage may vary heavily for HTML and CSS code and depends on the complexity.)
