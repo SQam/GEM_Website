@@ -4,6 +4,10 @@ The below documents how we should write markup for this project. Using best prac
 
 All HTML pages should be verified against the [W3C validator](http://validator.w3.org/) to ensure that the markup is well formed. This in and of itself is not directly indicative of good code, but it helps to weed out problems that are able to be tested via automation. It is no substitute for manual code review. (For other validators, see HTML Validation in the Codex).
 
+## Folder Hierarchy
+1. views/ -> HTML markup
+2. styles/ -> CSS styles
+
 ## General Structure
 ```html
 <!doctype html>
@@ -25,9 +29,9 @@ All HTML pages should be verified against the [W3C validator](http://validator.w
 </body>
 </html>
 ```
-Use lowercase for all tags, such as when defining the doctype. 
+Use lowercase for all tags, such as when defining the doctype.
 
-Notice how there is no need for an ending `/>` for self-closing elements in HTML5. 
+Notice how there is no need for an ending `/>` for self-closing elements in HTML5.
 
 Scripts are defined in the "head" and with the "defer" attribute, instead of placing scripts at the bottom of the "body" element.
 
