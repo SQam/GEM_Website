@@ -4,8 +4,6 @@ The below documents how we should write markup for this project. Using best prac
 
 All HTML pages should be verified against the [W3C validator](http://validator.w3.org/) to ensure that the markup is well formed. This in and of itself is not directly indicative of good code, but it helps to weed out problems that are able to be tested via automation. It is no substitute for manual code review. (For other validators, see HTML Validation in the Codex).
 
-Tips are prefixed after each section with a `*`.
-
 ## General Structure
 ```html
 <!doctype html>
