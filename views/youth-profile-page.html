@@ -14,7 +14,7 @@
     <form action="#" method="post" enctype="multipart/form-data">
       <fieldset>
         <legend></legend>
-        <img src="" width="120" height="120">
+        <img src="default.png" width="120" height="120" alt="default profile picture">
         <br>
         <label for="youth-profile-upload">
           <input id="youth-profile-upload" type="file">
@@ -31,11 +31,11 @@
           State:
           <select id="youth-profile-state">
             <option value="AK">Alaska</option>
-	      </select>
+          </select>
         </label>
         <br>
         <label for="youth-profile-city">
-	      City:
+          City:
           <select id="youth-profile-city">
             <option value="Juno">Juno</option>
           </select>
@@ -59,16 +59,12 @@
           <select id="youth-profile-month">
             <option value="">Month</option>
           </select>
-	    </label>
-	    <label for="youth-profile-year">
-	      <select id="youth-profile-year">
-	        <option value="">Year</option>
-	      </select>
-	    </label>
-        <br>
-	    <label for="youth-profile-join">
-          <input id="youth-profile-join" type="submit" value="Join the Movement!">
-        </label>        
+          </label>
+        <label for="youth-profile-year">
+          <select id="youth-profile-year">
+            <option value="">Year</option>
+          </select>
+	    </label>               
         <div>Causes You're interested in</div>
         <div><small>Select all that apply</small></div>
         <div>
@@ -118,7 +114,11 @@
         <div>
           <h4>Cause</h4>
           <div>Short Description of the cause and what it stands for</div>
-        </div>      
+        </div> 
+        <br>
+        <label for="youth-profile-join">
+          <input id="youth-profile-join" type="submit" value="Join the Movement!">
+        </label> 
       </fieldset>
     </form>
   </section> 
