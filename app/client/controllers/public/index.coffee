@@ -40,7 +40,7 @@ Template.index.rendered = ->
               if error
                 alert error.reason
               else
-                alert "Invite requested. We'll be in touch soon. Thanks for your interest in The GEM Network!"
+                alert "Invite requested. We'll be in touch soon. Thanks for your interest in The GEM Movement!"
       )
   )
 

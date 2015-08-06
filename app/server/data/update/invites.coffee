@@ -29,7 +29,7 @@ Meteor.methods(
         Email.send(
           to: invitee.email
           from: "The Meteor Chef <business@themeteorchef.com>"
-          subject: "Welcome to The GEM Network!"
+          subject: "Welcome to The GEM Movement!"
           html: Handlebars.templates['send-invite'](
             token: token
             url: url

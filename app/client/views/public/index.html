@@ -1,12 +1,29 @@
 <template name="index">
-  <h3 class="page-header">Request an Invite to The GEM Network</h3>
-  <img class="gem-people-png" src="/GEM_people_in_field.png" alt="Happy People in Field">
-  <!--TODO: Change graphic and description-->
-  <p>The GEM Network is a network to connect young people to a supportive
-  network! Type in your email below to get on the beta list.</p>
-  <form id="request-beta-invite" class="email-form">
-    <input type="email" name="emailAddress" class="form-control" placeholder="e.g. beatrix@beta.com">
-    <button type="submit" class="btn btn-success">Request Beta Invite</button>
-  </form>
-  {{>signupCount}}
+  <section title="beta-signup">
+    <img class="gem-logo-primary" src="/logo.png" alt="GEM Movement Logo">
+    <div id="containingBlock">
+      <div class="videoWrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8Z1TptOehAg" allowfullscreen></iframe>
+      </div>
+    </div>
+    <p>The GEM Movement is a free web-based social media and crowdfunding platform that brings together youth, schools, organizations and green businesses to support each other in creating a sustainable and thriving planet.
+    </p>
+    <h3 class="page-header">Request an Invite</h3>
+    <form id="request-beta-invite" class="email-form" action="#" method="post">
+      <fieldset>
+        <legend>
+          Sign up to receive updates on the progress of this project.
+        </legend>
+        <label for="alpha-email">
+          <input id="coming-soon-email" type="email" name="emailAddress"
+                                                     class="" placeholder="e.g. example@hotmail.com">
+        </label>
+        <label for="alpha-email-submit">
+          <button class="btn btn-success submit-btn" type="submit">Request Invite</button>
+        </label>
+      </fieldset>
+    </form>
+    {{>signupCount}}
+  </section>
+
 </template>
