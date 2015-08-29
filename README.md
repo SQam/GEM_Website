@@ -1,3 +1,6 @@
-# Home-Page
+# GEM Website Repo
 
-[Style Guide](styleguide.md)
+This repo is meant to be everything needed to setup an instance of the GEM
+website.
+
+[OUTDATED]All code should adhere to the style guide: [styleguide.md](styleguide.md)
