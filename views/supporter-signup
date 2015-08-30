@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Started</title>
+</head>
+<body>
+  <section title="youth-signup">
+    <h1>Supporter</h1>
+    <p>
+      Heirloom actually mixtape direct trade Blue Bottle. Chillwave meditation street art pour-over typewriter trust fund. Beard Truffaut occupy butcher forage, paleo sriracha bicycle rights twee Bushwick craft beer. Sustainable leggings hoodie roof party Tumblr, DIY photo booth Odd Future bespoke. Helvetica locavore gentrify tote bag, four loko PBR&B American Apparel cliche tattooed. Vinyl 90's beard, brunch Thundercats Pitchfork photo booth blog normcore Neutra cred fixie locavore twee. Street art tofu chambray master cleanse Blue Bottle.
+    </p>
+    <section title="action-panels">
+      <div class="action-panel">Create Profile</div>
+      <div class="action-panel">Create Projects</div>
+      <div class="action-panel">Find Support</div>
+      <div class="action-panel">Join Community</div>
+    </section>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Join Us!</legend>
+        <label for="youth-join-email">
+          <input id=youth-join-email" type="text" placeholder="Email">
+        </label>
+        <label for="youth-join-password">
+          <input id=youth-join-password" type="password" placeholder="Password">
+        </label>
+        <label for="youth-join-submit">
+          <input id="youth-join-submit" type="submit" value="Sign Up">
+        </label>
+      </fieldset>
+    </form>
+    <a href="#">Cancel</a>
+  </section>
+</body>
+</html>
