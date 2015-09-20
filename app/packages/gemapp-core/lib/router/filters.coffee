@@ -54,9 +54,9 @@ Router.onBeforeAction checkUserLoggedIn, except: [
   'reset-password'
 ]
 
+# Beta tester disallow list
 Router.onBeforeAction userAuthenticatedBetaTester, only: [
   'coming-soon',
-  'profile',
   'signup',
   'signup/:token',
   'login',
@@ -65,9 +65,9 @@ Router.onBeforeAction userAuthenticatedBetaTester, only: [
   'invites'
 ]
 
+# Admin disallow list
 Router.onBeforeAction userAuthenticatedAdmin, only: [
   'coming-soon',
-  'profile',
   'signup',
   'signup/:token',
   'login',
