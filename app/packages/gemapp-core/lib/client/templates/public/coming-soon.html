@@ -1,0 +1,27 @@
+<template name="coming-soon">
+  <section class="center-block" title="coming-soon">
+    <img class="gem-logo-primary" src="/logo.png" alt="GEM Movement Logo">
+    <h1>Coming Soon</h1>
+    <p>The GEM Movement is a free web-based social media and crowdfunding platform that brings together youth, schools, organizations and green businesses to support each other in creating a sustainable and thriving planet.
+    <h1>How It Works</h1>
+    <div id="containingBlock">
+      <div class="videoWrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8Z1TptOehAg" allowfullscreen></iframe>
+      </div>
+    </div>
+    </p>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Subscribe to receive updates on the progress of this project.</legend>
+        <label for="subscribe-email">
+          <input id="subscribe-email" type="text" placeholder="Email">
+        </label>
+        <label for="subscribe-submit">
+          <input id="subscribe-submit" type="submit" value="Submit">
+        </label>
+      </fieldset>
+    </form>
+  </section>
+  {{>optRender name='requestBetaInvite'}}
+</template>

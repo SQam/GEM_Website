@@ -1,0 +1,19 @@
+<template name="requestBetaInvite">
+  <section title="requestBetaInvite">
+    <h3 class="page-header">Request an Invite</h3>
+    <form id="requestBetaInvite" class="email-form" action="#" method="post">
+      <fieldset>
+        <legend>
+          Put your name on the list of first beta testers.
+        </legend>
+        <label for="alpha-email">
+          <input id="coming-soon-email" type="email" name="emailAddress" class="" placeholder="e.g. example@hotmail.com">
+        </label>
+        <label for="alpha-email-submit">
+          <button class="btn btn-success submit-btn" type="submit">Request Invite</button>
+        </label>
+      </fieldset>
+    </form>
+    {{>betaSignupCount}}
+  </section>
+</template>
