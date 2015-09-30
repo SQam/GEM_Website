@@ -9,7 +9,7 @@ Why choose meteor for this project?
 ## Repo Organization
 
 ```python
-├── app # Main app directory. No GEM code should go here
+├── app # Main app directory to hold packages and static assets.
 │   ├── packages # All GEM code goes here in its respective package
 │   │   ├── gemapp-beta-invites # beta-invite system related code
 │   │   │   ├── lib
@@ -93,7 +93,7 @@ Reference: [https://www.discovermeteor.com/blog/what-goes-where/](https://www.di
 npm install -g mupx # install meteor-up for deployment
 cd ./deploy && mupx deploy
 
-## Data Models
+## (Draft) Data Models
 * Project Model
 	* Name
 	* Description
@@ -110,9 +110,9 @@ cd ./deploy && mupx deploy
 	* Location
 	* My projects
 	* Recent GEM activity
-	* Role (either supporter or youth)
+	* Role (either supporter, mentor, or youth)
 
-##Page Outlines
+## (Draft) Page Outlines
 * coming-soon.html <--Landing page
 	* Description of GEM project
 	* Video of how it works
@@ -132,9 +132,9 @@ cd ./deploy && mupx deploy
 * dashboard.html <--User dashboard
 	* 
 
+sign-in.html
 invites.html <-- Admin access to beta invite system
 signup.html
-sign-in.html
 
 closed-invitations.html
 open-invitations.html
@@ -148,4 +148,3 @@ updates.html
 
 ## TODO
 -What are the URL's of each page?
--What's on the rest of the pages?
