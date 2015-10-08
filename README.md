@@ -8,6 +8,7 @@ Full stack development in JavaScript, templating in views, and integration with 
 Webapp feeling with different views of the same page (so no reloading), easier transition to mobile
 and mobile app (with cordova), and webapp mindset instead of webpage mindset (eg like Trello not Wikipedia).
 More details here: [http://wiki.dandascalescu.com/essays/why_meteor](http://wiki.dandascalescu.com/essays/why_meteor)
+Good 25min intro: [https://youtu.be/dOCMpoeuwTI](https://youtu.be/dOCMpoeuwTI)
 
 * What is the Beta Invites package?
 
