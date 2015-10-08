@@ -4,7 +4,10 @@ This repo is a MeteorJS project with everything needed to setup an instance of t
 
 * Why choose meteor for this project?
 
-[http://wiki.dandascalescu.com/essays/why_meteor](http://wiki.dandascalescu.com/essays/why_meteor)
+Full stack development in JavaScript, templating in views, and integration with MongoDB.
+Webapp feeling with different views of the same page (so no reloading), easier transition to mobile
+and mobile app (with cordova), and webapp mindset instead of webpage mindset (eg like Trello not Wikipedia).
+More details here: [http://wiki.dandascalescu.com/essays/why_meteor](http://wiki.dandascalescu.com/essays/why_meteor)
 
 * What is the Beta Invites package?
 
@@ -23,6 +26,10 @@ That's handled in here: /app/packages/gemapp-core/lib/client/templates/public/lo
 Once rendered a method is called to the server to make the actual login: Meteor.loginWithPassword(user.email, user.password,
 That function is defined in a package listed in this file called accounts-password: app/packages/gemapp-lib/package.js
 You can see the API for the function here: http://docs.meteor.com/#/full/meteor_loginwithpassword
+
+* What is the inspiration for the GEM project?
+
+[https://drive.google.com/open?id=0BycydH5QLyRsRmpoRTVtcXlyVUIwREF4Qm0ybk80UnBRSnFN](https://drive.google.com/open?id=0BycydH5QLyRsRmpoRTVtcXlyVUIwREF4Qm0ybk80UnBRSnFN)
 
 ## Repo File Organization
 
