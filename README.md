@@ -1,12 +1,30 @@
 # GEM Website Repo
 
-This repo is meant to be everything needed to setup an instance of the GEM website.
+This repo is a MeteorJS project with everything needed to setup an instance of the GEM webapp.
 
+*Why choose meteor for this project?
 
-Why choose meteor for this project?
 [http://wiki.dandascalescu.com/essays/why_meteor](http://wiki.dandascalescu.com/essays/why_meteor)
 
-## Repo Organization
+*What is the Beta Invites package?
+
+The beta-invites package is meant to hold all of the features related to the beta-invite system.
+It's done by abstracting away templates from the core package into the beta-invites package and
+only loading them if the beta-invites package is installed. Ideally we should be able to remove 
+the beta-invite package and the webapp would be running without the beta-invite system. A good
+example of this architecture is with a project called Telescope
+[https://github.com/TelescopeJS/Telescope](https://github.com/TelescopeJS/Telescope).
+
+*How does the login process work?
+
+Starts in here with the header, with a login button that links to the login page. app/packages/gemapp-core/lib/client/templates/header.html
+On the login page here takes the email and password app/packages/gemapp-core/lib/client/templates/public/login.html which displays the login
+That's handled in here: /app/packages/gemapp-core/lib/client/templates/public/login.coffee
+Once rendered a method is called to the server to make the actual login: Meteor.loginWithPassword(user.email, user.password,
+That function is defined in a package listed in this file called accounts-password: app/packages/gemapp-lib/package.js
+You can see the API for the function here: http://docs.meteor.com/#/full/meteor_loginwithpassword
+
+## Repo File Organization
 
 ```python
 ├── app # Main app directory to hold packages and static assets.
