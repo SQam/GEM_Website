@@ -2,11 +2,11 @@
 
 This repo is a MeteorJS project with everything needed to setup an instance of the GEM webapp.
 
-*Why choose meteor for this project?
+* Why choose meteor for this project?
 
 [http://wiki.dandascalescu.com/essays/why_meteor](http://wiki.dandascalescu.com/essays/why_meteor)
 
-*What is the Beta Invites package?
+* What is the Beta Invites package?
 
 The beta-invites package is meant to hold all of the features related to the beta-invite system.
 It's done by abstracting away templates from the core package into the beta-invites package and
@@ -15,7 +15,7 @@ the beta-invite package and the webapp would be running without the beta-invite 
 example of this architecture is with a project called Telescope
 [https://github.com/TelescopeJS/Telescope](https://github.com/TelescopeJS/Telescope).
 
-*How does the login process work?
+* How does the login process work?
 
 Starts in here with the header, with a login button that links to the login page. app/packages/gemapp-core/lib/client/templates/header.html
 On the login page here takes the email and password app/packages/gemapp-core/lib/client/templates/public/login.html which displays the login
