@@ -32,92 +32,65 @@ You can see the API for the function here: http://docs.meteor.com/#/full/meteor_
 
 [https://drive.google.com/open?id=0BycydH5QLyRsRmpoRTVtcXlyVUIwREF4Qm0ybk80UnBRSnFN](https://drive.google.com/open?id=0BycydH5QLyRsRmpoRTVtcXlyVUIwREF4Qm0ybk80UnBRSnFN)
 
-## Repo File Organization
 
-```python
-├── app # Main app directory to hold packages and static assets.
-│   ├── packages # All GEM code goes here in its respective package
-│   │   ├── gemapp-beta-invites # beta-invite system related code
-│   │   │   ├── lib
-│   │   │   │   ├── client
-│   │   │   │   │   ├── collection-invites.coffee
-│   │   │   │   │   └── templates
-│   │   │   │   │       ├── beta-signup-count.coffee
-│   │   │   │   │       ├── beta-signup-count.html
-│   │   │   │   │       ├── beta-signup.html
-│   │   │   │   │       ├── closed-invitations.coffee
-│   │   │   │   │       ├── closed-invitations.html
-│   │   │   │   │       ├── invites.html
-│   │   │   │   │       ├── invites-page-header.html
-│   │   │   │   │       ├── open-invitations.coffee
-│   │   │   │   │       ├── open-invitations.html
-│   │   │   │   │       ├── request-beta-invite.coffee
-│   │   │   │   │       └── request-beta-invite.html
-│   │   │   │   ├── routes.coffee
-│   │   │   │   └── server
-│   │   │   │       ├── beta-tokens.coffee
-│   │   │   │       ├── email
-│   │   │   │       │   ├── templates
-│   │   │   │       │   │   └── send-invite.handlebars
-│   │   │   │       │   └── validation.coffee
-│   │   │   │       ├── invites.coffee
-│   │   │   │       └── publications.coffee
-│   │   │   └── package.js
-│   │   ├── gemapp-core # Contains everything that can't be made a plugin
-│   │   │   ├── lib
-│   │   │   │   ├── client
-│   │   │   │   │   ├── helpers-ui.coffee
-│   │   │   │   │   ├── stylesheets
-│   │   │   │   │   └── templates
-│   │   │   │   │       ├── authenticated
-│   │   │   │   │       │   ├── dashboard.html
-│   │   │   │   │       │   └── profile.html
-│   │   │   │   │       ├── header.coffee
-│   │   │   │   │       ├── header.html
-│   │   │   │   │       ├── index.html
-│   │   │   │   │       ├── layout-default.html
-│   │   │   │   │       └── public
-│   │   │   │   │           ├── coming-soon.html
-│   │   │   │   │           └── updates.html
-│   │   │   │   ├── router
-│   │   │   │   │   ├── filters.coffee
-│   │   │   │   │   └── routes-public.coffee
-│   │   │   │   ├── server
-│   │   │   │   │   ├── email
-│   │   │   │   │   │   └── reset-password.coffee
-│   │   │   │   │   └── publications.coffee
-│   │   │   │   └── startup.coffee
-│   │   │   ├── package.js
-│   │   │   └── public
-│   │   │       ├── animated_favicon.gif
-│   │   │       ├── favicon_212052
-│   │   │       ├── favicon.ico
-│   │   │       ├── GEM_people_in_field.png
-│   │   │       └── logo.png
-│   │   ├── gemapp-lib
-│   │   │   ├── lib
-│   │   │   │   └── core.js
-│   │   │   └── package.js
-│   │   └── npm-packages
-│   │       └── package.js
-│   ├── smart.json
-│   └── smart.lock
-├── circle.yml
-├── deploy
-│   ├── mup.json
-│   └── settings.json
-├── README.md
-├── styleguide.md
-└── sync
-```
-Reference: [https://www.discovermeteor.com/blog/what-goes-where/](https://www.discovermeteor.com/blog/what-goes-where/) 
+## Rough Page Outlines
+* gemmovement.org/coming-soon.html <--Landing page
+	* GEM Logo
+	* Template: about-gem
+	* Video of how it works
+	* Template: beta-signup
+	* Template: contact-us
+* gemmovement.org/profile.html <--Profile page for all users
+	* view/change profile photo
+	* view/change display name
+	* view/change personal bio (like LinkedIn)
+	* view/change location (country (US only for now), state, city)
+	* view/change year of birth (to tell whether to classify as youth)
+	* view/change email
+	* view/change select one or more interests (pictures and descriptions of each)
+	* Supporter Only:
+		* Supporter type (individual vs organization)
+		* view/change support. Maybe keywords? Maybe just Time, Money, Products, Services catagories?
+		* Description/Examples of support
+	* Note: Recommend using this package: https://atmospherejs.com/socialize/user-profile
+* gemmovement.org/signup.html
+	* User can pick between Youth, mentor and Supporter
+	* "Youth" and description (to be provided)
+	* "Mentor" and description (to be provided)
+	* "Supporter" and description (to be provided)
+	* User clicks on "Register"
+	* Redirects to account setup (profile page)
+* gemmovement.org/dashboard.html <--User dashboard
+	* TBD...
+* gemmovement.org/login.html
+	* TBD...
+* gemmovement.org/invites.html <-- Admin access to beta invite system
+	* TBD...
+* gemmovement.org/not-found.html
+	* TBD...
 
-## Repo Style
-[OUTDATED]All code should adhere to the style guide: [styleguide.md](styleguide.md)
 
-## Deployment
-npm install -g mupx # install meteor-up for deployment
-cd ./deploy && mupx deploy
+## Rough Templates
+* contact-us
+	* Mention we are interested in volunteers too
+	* Provide a way of contact. TBD
+* beta-signup
+	* Provide way for youth, mentors and supporters to join beta.
+	* We collect information such as email, etc.
+* about-gem
+	* All about the GEM Movement.  youth, mentors and supporters.
+	* Goal of the project.
+	* Link to Circle Of Children.
+* closed-invitations
+	* 
+* open-invitations
+	* 
+* signup-count
+	* Print string with number of request for invites in DB
+* reset-password
+	* 
+* updates
+	*
 
 ## (Draft) Data Models
 * Project Model
@@ -138,39 +111,72 @@ cd ./deploy && mupx deploy
 	* Recent GEM activity
 	* Role (either supporter, mentor, or youth)
 
-## (Draft) Page Outlines
-* coming-soon.html <--Landing page
-	* Description of GEM project
-	* Video of how it works
-	* Subscribe here to get updates
-* profile.html <--Profile page for all users
-	* Profile photo (allow change)
-	* Select country, state and city
-	* Name
-	* Date of Birth (to tell whether to classify as youth)
-	* Email
-	* ?Interest selection (used for mapping)
-	* ?Username
-	* (Supporter) Supporter type (individual vs organization)
-	* (Supporter) List of support
-		* Type of support (Time, Money, Products, or Services)
-		* Support description
-* dashboard.html <--User dashboard
-	* 
+## Deployment
+npm install -g mupx # install meteor-up for deployment
+cd ./deploy && mupx deploy
 
-sign-in.html
-invites.html <-- Admin access to beta invite system
-signup.html
+ 
+## Repo File Organization
 
-closed-invitations.html
-open-invitations.html
-coming-soon.html
-login.html
-not-found.html
-recover-password.html
-reset-password.html
-signup-count.html
-updates.html
-
-## TODO
--What are the URL's of each page?
+```python
+├── app # Main app directory to hold packages and static assets.
+│   ├── packages # All GEM code goes here in its respective package
+│   │   ├── gemapp-beta-invites # beta-invite add-on related code
+│   │   │   ├── lib
+│   │   │   │   ├── client
+│   │   │   │   │   ├── collection-invites.coffee
+│   │   │   │   │   └── templates
+│   │   │   │   │       ├── beta-signup-count.coffee
+│   │   │   │   │       └── request-beta-invite.html
+│   │   │   │   ├── routes.coffee
+│   │   │   │   └── server
+│   │   │   │       ├── beta-tokens.coffee
+│   │   │   │       ├── email
+│   │   │   │       │   ├── templates
+│   │   │   │       │   │   └── send-invite.handlebars
+│   │   │   │       │   └── validation.coffee
+│   │   │   │       ├── invites.coffee
+│   │   │   │       └── publications.coffee
+│   │   │   └── package.js
+│   │   ├── gemapp-core # Contains everything that doesn't makes sense to be put in a separate package
+│   │   │   ├── lib
+│   │   │   │   ├── client
+│   │   │   │   │   ├── helpers-ui.coffee
+│   │   │   │   │   ├── stylesheets
+│   │   │   │   │   └── templates
+│   │   │   │   │       ├── authenticated
+│   │   │   │   │       │   ├── dashboard.html
+│   │   │   │   │       │   └── profile.html
+│   │   │   │   │       ├── header.coffee
+│   │   │   │   │       ├── header.html
+│   │   │   │   │       ├── index.html
+│   │   │   │   │       ├── layout-default.html
+│   │   │   │   │       └── public
+│   │   │   │   │           ├── coming-soon.html
+│   │   │   │   │           └── updates.html
+│   │   │   │   ├── router
+│   │   │   │   │   ├── filters.coffee
+│   │   │   │   │   └── routes-public.coffee
+│   │   │   │   ├── server
+│   │   │   │   │   ├── email
+│   │   │   │   │   │   └── reset-password.coffee
+│   │   │   │   │   └── publications.coffee
+│   │   │   │   └── startup.coffee
+│   │   │   └── package.js
+│   │   ├── gemapp-lib
+│   │   │   ├── lib
+│   │   │   │   └── core.js
+│   │   │   └── package.js
+│   │   └── npm-packages
+│   │       └── package.js
+│   ├── smart.json
+│   └── smart.lock
+├── circle.yml
+├── deploy
+│   ├── mup.json
+│   └── settings.json
+├── README.md
+├── styleguide.md
+└── sync
+```
+Reference: [https://www.discovermeteor.com/blog/what-goes-where/](https://www.discovermeteor.com/blog/what-goes-where/) 
