@@ -3,11 +3,9 @@
 This repo is a MeteorJS project with everything needed to setup an instance of the GEM webapp.
 
 * Why choose meteor for this project?
-
-Full stack development in JavaScript, templating in views, and integration with MongoDB.
-Webapp feeling with different views of the same page (so no reloading), easier transition to mobile
-and mobile app (with cordova), and webapp mindset instead of webpage mindset (eg like Trello not Wikipedia).
-More details here: [http://wiki.dandascalescu.com/essays/why_meteor](http://wiki.dandascalescu.com/essays/why_meteor)
+	* Full stack development in JavaScript, templating in views, and integration with MongoDB.
+	* Webapp feeling with different views of the same page (so no reloading), easier transition to mobile and mobile app (with cordova), and webapp mindset instead of webpage mindset (eg like Trello not Wikipedia).
+	* More details here: [http://wiki.dandascalescu.com/essays/why_meteor](http://wiki.dandascalescu.com/essays/why_meteor)
 Good 25min intro: [https://youtu.be/dOCMpoeuwTI](https://youtu.be/dOCMpoeuwTI)
 
 * What is the Beta Invites package?
@@ -21,11 +19,11 @@ example of this architecture is with a project called Telescope
 
 * How does the login process work?
 
-Starts in here with the header, with a login button that links to the login page. app/packages/gemapp-core/lib/client/templates/header.html
-On the login page here takes the email and password app/packages/gemapp-core/lib/client/templates/public/login.html which displays the login
-That's handled in here: /app/packages/gemapp-core/lib/client/templates/public/login.coffee
-Once rendered a method is called to the server to make the actual login: Meteor.loginWithPassword(user.email, user.password,
-That function is defined in a package listed in this file called accounts-password: app/packages/gemapp-lib/package.js
+1. Starts in app/packages/gemapp-core/lib/client/templates/header.html, with a login button that links to the login page. 
+2. On the app/packages/gemapp-core/lib/client/templates/public/login.html page, the user inputs their email and password.
+3. Processing that is handled in /app/packages/gemapp-core/lib/client/templates/public/login.coffee
+4. Once rendered, a method is called to the server to make the actual login: Meteor.loginWithPassword(user.email, user.password)
+5. That function is defined in a package called accounts-password which is included into our project with app/packages/gemapp-lib/package.js.
 You can see the API for the function here: http://docs.meteor.com/#/full/meteor_loginwithpassword
 
 * What is the inspiration for the GEM project?
@@ -179,4 +177,4 @@ cd ./deploy && mupx deploy
 ├── styleguide.md
 └── sync
 ```
-Reference: [https://www.discovermeteor.com/blog/what-goes-where/](https://www.discovermeteor.com/blog/what-goes-where/) 
+Reference: [https://www.discovermeteor.com/blog/what-goes-where/](https://www.discovermeteor.com/blog/what-goes-where/)
