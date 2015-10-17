@@ -33,6 +33,7 @@ You can see the API for the function here: http://docs.meteor.com/#/full/meteor_
 
 ## Rough Page Outlines
 Note: URL represents the state of the app.
+
 * gemmovement.org/coming-soon.html <--Landing page
 	* GEM Logo
 	* Template: about-gem
