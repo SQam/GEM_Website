@@ -1,5 +1,8 @@
-<template name="profile">
-  <section title="youth-profile">
+<template name="test">
+    <button class="inc">Edit</button>
+</template>
+<template name="settings">
+  <section title="profile">
     <h2>Welcome to the Global Empowerment Mandala!</h2>
     <div><small>There are just a few things that we would like to know about you to get you started.</small></div>
     <br>
@@ -8,52 +11,56 @@
         <legend></legend>
         <img src="default.png" width="120" height="120" alt="default profile picture">
         <br>
-        <label for="youth-profile-upload">
-          <input id="youth-profile-upload" type="file">
+        {{> test}}
+        {{> editYourAvatarModal}}
+        <br>
+        <br>
+        <label for="profile-upload">
+          <input id="profile-upload" type="file">
         </label>
         <br>
-        <label for="youth-profile-country">
+        <label for="profile-country">
           Choose your Country:
-          <select id="youth-profile-country">
+          <select id="profile-country">
             <option value="USA">United States</option>
           </select>
         </label>
         <br>
-        <label for="youth-profile-state">
+        <label for="profile-state">
           State:
-          <select id="youth-profile-state">
+          <select id="profile-state">
             <option value="AK">Alaska</option>
           </select>
         </label>
         <br>
-        <label for="youth-profile-city">
+        <label for="profile-city">
           City:
-          <select id="youth-profile-city">
+          <select id="profile-city">
             <option value="Juno">Juno</option>
           </select>
         </label>
         <br>
-        <label for="youth-profile-first-name">
-          First Name: <input id="youth-profile-first-name" type="text">
+        <label for="profile-first-name">
+          First Name: <input id="profile-first-name" type="text">
         </label>
         <br>
-        <label for="youth-profile-last-name">
-          Last Name: <input id="youth-profile-last-name" type="text">
+        <label for="profile-last-name">
+          Last Name: <input id="profile-last-name" type="text">
         </label>
         <br>
-        <label for="youth-profile-day">
+        <label for="profile-day">
           Date of Birth:
-          <select id="youth-profile-day">
+          <select id="profile-day">
             <option value="">Day</option>
           </select>
         </label>
-        <label for="youth-profile-month">
-          <select id="youth-profile-month">
+        <label for="profile-month">
+          <select id="profile-month">
             <option value="">Month</option>
           </select>
         </label>
-        <label for="youth-profile-year">
-          <select id="youth-profile-year">
+        <label for="profile-year">
+          <select id="profile-year">
             <option value="">Year</option>
           </select>
         </label>
@@ -108,8 +115,8 @@
           <div>Short Description of the cause and what it stands for</div>
         </div>
         <br>
-        <label for="youth-profile-join">
-          <input id="youth-profile-join" type="submit" value="Join the Movement!">
+        <label for="profile-join">
+          <input id="profile-join" type="submit" value="Join the Movement!">
         </label>
       </fieldset>
     </form>

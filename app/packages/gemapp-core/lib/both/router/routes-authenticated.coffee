@@ -32,12 +32,12 @@ loggedIn.route '/dashboard',
       top: "header"
       main: "dashboard"
 
-loggedIn.route '/profile',
-  name: 'profile'
+loggedIn.route '/settings',
+  name: 'settings'
   action: ->
     BlazeLayout.render 'layoutDefault',
       top: "header"
-      main: "profile"
+      main: "settings"
 
 loggedIn.route '/logout',
   name: 'logout'
