@@ -49,7 +49,6 @@ Package.onUse(function(api) {
     'lib/client/templates/public/introduction-supporter.html',
     'lib/client/templates/public/introduction-youth.html',
     'lib/client/templates/public/not-found.html',
-    'lib/client/templates/public/sign-in.html',
     'lib/client/templates/public/updates.html',
   ], 'client');
 
