@@ -11,17 +11,25 @@
     </div>
     </p>
 
-    <form action="#" method="post">
+	{{> emailSub}}
+	
+    
+	
+  </section>
+  {{>optRender name='requestBetaInvite'}}
+</template>
+
+<template name="emailSub">
+	<form  method="post" class="emailSub" action="#" id="subscribeEmail">
       <fieldset>
         <legend>Subscribe to receive updates on the progress of this project.</legend>
         <label for="subscribe-email">
-          <input id="subscribe-email" type="text" placeholder="Email">
+          <input class="the_email" id="subscribe-email" name="email" type="email" placeholder="e.g. example@hotmail.com">
         </label>
         <label for="subscribe-submit">
-          <input id="subscribe-submit" type="submit" value="Submit">
+          <button id="subscribe-submit" type="submit" value="Submit" class="emailSubmit">Submit</button>
         </label>
       </fieldset>
-    </form>
-  </section>
-  {{>optRender name='requestBetaInvite'}}
+    </form>	
+	
 </template>
