@@ -25,3 +25,11 @@ UI.registerHelper('epochToString', (timestamp) ->
 Template.registerHelper('optRender', () ->
   return if Template[this.name] then Template[this.name] else null;
 )
+
+
+Session.set "Mongol", {
+  'collections': ['users', 'projects']
+  'display': true
+  'opacity_normal': ".7"
+  'opacity_expand': ".9"
+}
