@@ -37,7 +37,7 @@ Package.onUse(function (api) {
     'email',
     'mrt:moment',
     'fourseven:scss@3.3.3_3',
-    'pinglamb:bootstrap3',
+    'twbs:bootstrap',
     'random',
     'themeteorchef:jquery-validation',
     'underscore',
