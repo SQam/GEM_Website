@@ -1,0 +1,25 @@
+<!--Project page template-->
+<template name="project">
+ <!--{{> updateBookForm}}-->
+	{{> insertBookForm}}
+  <section title="project">
+    Name:
+    Picture:
+    Description:
+    Location:
+    Wishlist:
+    Owners:
+    Members:
+    Activity Feed
+    Project other stats?
+
+  </section>
+</template>
+
+	<template name="updateBookForm">
+  {{> quickForm collection="Projects" doc=this id="updateBookForm" type="update"}}
+</template>
+
+<template name="insertBookForm">
+  {{> quickForm collection="projects" id="insertBookForm" type="insert"}}
+</template>

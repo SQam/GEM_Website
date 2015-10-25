@@ -24,9 +24,12 @@ exposed.route '/login',
       main: "login"
 
 # TODO: Create real project pages
-exposed.route '/project',
+exposed.route '/project/:project_id',
   name: 'project'
   action: (params, queryParams) ->
+    # TODO: Tell router to look at our :project parameter and assign it to a
+    # session variable so that we can access it in our template.
+    #Session.set 'project_id', @params.peoject_id
     console.log("Yeah! We are on the post:", params.postId);
     BlazeLayout.render 'layoutDefault',
       top: "header"
