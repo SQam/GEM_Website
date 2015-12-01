@@ -11,6 +11,7 @@ Package.onUse(function(api) {
 
   var packages = [
     'gemapp:lib@0.0.1',
+    'gemapp:core@0.0.1',
   ];
 
   api.use(packages);
