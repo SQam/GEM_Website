@@ -19,7 +19,6 @@ Package.onUse(function(api) {
   api.imply(packages);
 
   api.addFiles([
-    'lib/routes.coffee',
     'lib/client/collection-invites.coffee',
   ], ['client', 'server']);
 
