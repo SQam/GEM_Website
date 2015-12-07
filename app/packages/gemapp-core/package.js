@@ -17,9 +17,9 @@ Package.onUse(function(api) {
   api.imply(packages);
 
   api.addFiles([
-    'lib/router/routes-authenticated.coffee',
-    'lib/router/routes-public.coffee',
-    'lib/both/collections/projects.js'
+    'lib/both/router/routes-authenticated.coffee',
+    'lib/both/router/routes-public.coffee',
+    //'lib/both/collections/projects.js'
   ], ['client', 'server']);
 
   api.addFiles([
@@ -44,6 +44,7 @@ Package.onUse(function(api) {
     'lib/client/templates/public/updates.html',
     'lib/client/templates/public/project.html',
     'lib/client/templates/authenticated/dashboard.html',
+    'lib/client/templates/authenticated/settings.html',
     'lib/client/stylesheets/application.scss',
     'lib/client/stylesheets/globals/_bootstrap.scss',
     'lib/client/stylesheets/globals/_extends.scss',
