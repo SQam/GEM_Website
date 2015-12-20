@@ -1,5 +1,10 @@
-Template.openInvitations.helpers(
+Template.openInvitations.onCreated ->
+  self = this
+  self.autorun ->
+    self.subscribe '/invites'
 
+
+Template.openInvitations.helpers(
   hasInvites: ->
     getInvites = Invites.find({invited: false}, {fields: "_id": 1, "invited": 1}).count()
     if getInvites > 0 then true else false

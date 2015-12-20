@@ -11,6 +11,7 @@ Package.onUse(function(api) {
 
   var packages = [
     'gemapp:lib@0.0.1',
+    'gemapp:core@0.0.1',
   ];
 
   api.use(packages);
@@ -18,7 +19,6 @@ Package.onUse(function(api) {
   api.imply(packages);
 
   api.addFiles([
-    'lib/routes.coffee',
     'lib/client/collection-invites.coffee',
   ], ['client', 'server']);
 

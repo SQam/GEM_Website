@@ -17,13 +17,12 @@ Package.onUse(function(api) {
   api.imply(packages);
 
   api.addFiles([
-    'lib/router/filters.coffee',
     'lib/router/routes-authenticated.coffee',
-    'lib/router/routes-global.coffee',
     'lib/router/routes-public.coffee',
   ], ['client', 'server']);
 
   api.addFiles([
+    'lib/client/startup.coffee',
     'lib/client/helpers-ui.coffee',
     'lib/client/templates/index.html',
     'lib/client/templates/public/recover-password.html',
@@ -54,7 +53,7 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'lib/server/publications.coffee',
-    'lib/startup.coffee',
+    'lib/server/startup.coffee',
     'lib/server/email/reset-password.coffee'
   ], 'server');
 

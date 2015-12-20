@@ -1,54 +1,65 @@
-Router.route('coming-soon',
-  path: '/'
-  template: 'coming-soon'
-  onBeforeAction: ->
-    Session.set 'currentRoute', 'coming-soon'
-    @next()
-)
+# All public routes are in this file
 
-Router.route('signup',
-  path: '/signup'
-  template: 'signup'
-  onBeforeAction: ->
-    Session.set 'currentRoute', 'signup'
+FlowRouter.notFound =
+  action: ->
+    BlazeLayout.render 'layoutDefault',
+      top: "header"
+      main: "notFound"
+
+# Note: Don't use "public" keyword because it's reserved in JS.
+exposed = FlowRouter.group {}
+
+exposed.route '/',
+  name: 'coming-soon'
+  action: ->
+    BlazeLayout.render 'layoutDefault',
+      top: "header"
+      main: "coming-soon"
+
+exposed.route '/login',
+  name: 'login'
+  action: ->
+    BlazeLayout.render 'layoutDefault',
+      top: "header"
+      main: "login"
+
+# TODO: Create real project pages
+exposed.route '/project',
+  name: 'project'
+  action: (params, queryParams) ->
+    console.log("Yeah! We are on the post:", params.postId);
+    BlazeLayout.render 'layoutDefault',
+      top: "header"
+      main: "project"
+
+exposed.route '/signup',
+  name: 'signup'
+  action: ->
+    BlazeLayout.render 'layoutDefault',
+      top: "header"
+      main: "signup"
     # Clear out the beta token on the /signup route without a token parameter
     # so if we switch from /signup/:token, the token doesn't copy over.
     Session.set 'betaToken', ''
-    @next()
-)
 
-Router.route('signup/:token',
-  path: '/signup/:token'
-  template: 'signup'
-  onBeforeAction: ->
-    Session.set 'currentRoute', 'signup'
+exposed.route '/signup/:token',
+  name: 'signup'
+  action: (params, queryParams) ->
+    console.log "Yeah! We are on the signup:", params
+    BlazeLayout.render 'layoutDefault',
+      top: "header"
+      main: "signup"
     # Tell Iron Router to look at our :token parameter and assign it to a
     # session variable so that we can access it in our template.
     Session.set 'betaToken', @params.token
-    @next()
-)
 
-Router.route('login',
-  path: '/login'
-  template: 'login'
-  onBeforeAction: ->
-    Session.set 'currentRoute', 'login'
-    @next()
-)
+exposed.route '/recover-password',
+  name: 'recoverPassword'
+  action: ->
+    BlazeLayour.render 'recoverPassword'
 
-Router.route('recover-password',
-  path: '/recover-password'
-  template: 'recoverPassword'
-  onBeforeAction: ->
-    Session.set 'currentRoute', 'recover-password'
-    @next()
-)
-
-Router.route('reset-password',
-  path: '/reset-password/:token'
-  template: 'resetPassword'
-  onBeforeAction: ->
-    Session.set 'currentRoute', 'reset-password'
+exposed.route '/reset-password/:token',
+  name: 'resetPassword'
+  action: ->
+    BlazeLayour.render 'resetPassword'
     Session.set 'resetPasswordToken', @params.token
-    @next()
-)

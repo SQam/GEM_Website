@@ -33,7 +33,6 @@ Package.onUse(function (api) {
     'cmather:handlebars-server',
     'coffeescript',
     'email',
-    'iron:router',
     'mrt:moment',
     'fourseven:scss@3.3.3_3',
     'pinglamb:bootstrap3',
@@ -44,6 +43,9 @@ Package.onUse(function (api) {
     'meteorhacks:fast-render@2.10.0',
     'fastclick',
     'msavin:mongol@1.4.3',
+    'kadira:flow-router',
+    'kadira:blaze-layout',
+    'arillo:flow-router-helpers',
     //'aldeed:autoform',
     //'particle4dev:upload-avatar',
   ];
