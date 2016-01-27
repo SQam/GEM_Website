@@ -1,5 +1,5 @@
 <template name="header">
-  <nav class="navbar navbar-default" role="navigation">
+  <nav class="navbar navbar-default" role="navigation" style="background-color: rgb(238, 255, 238); border-color: rgb(238, 255, 238); padding-top: 30px; padding-bottom: 40px;">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -9,12 +9,12 @@
           <span class="icon-bar"></span>
         </button>
         <!--<img class="navbar-brand gem-logo-primary" href="{{pathFor 'coming-soon'}}" src="/logo.png" alt="GEM Movement Logo">-->
-        <a class="" href="{{pathFor 'coming-soon'}}"><img class="navbar-brand" href="{{pathFor 'coming-soon'}}" src="/logo.png" alt="GEM Movement Logo"></a>
-        <!--<a class="navbar-brand" href="{{pathFor 'coming-soon'}}">The GEM Movement</a>-->
+        <a class="" href="{{pathFor 'coming-soon'}}"><img class="navbar-brand" href="{{pathFor 'coming-soon'}}" src="/logo.png" alt="GEM Movement Logo" style="height: 150px;"> </a>
+        <!--<a class="navbar-brastyle="height: 150px;"nd" href="{{pathFor 'coming-soon'}}">The GEM Movement</a>-->
       </div>
       <div class="collapse navbar-collapse">
         {{#if currentUser}}
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav" >
           <li class="{{currentRoute 'dashboard'}}"><a href="{{pathFor 'dashboard'}}">Dashboard</a></li>
           {{#if isInRole 'admin'}}
           {{> optRender name ='invitesPageButton'}}
@@ -32,10 +32,11 @@
           </li>
         </ul>
         {{else}}
-        <ul class="nav navbar-nav navbar-right">
+        
+        <ul class="nav navbar-nav navbar-right" style="padding-top:30px" >
           <!--<li>{{> loginButtons align="right"}}</li>-->
-          <li class="{{currentRoute 'login'}}"><a href="{{pathFor 'login'}}">Login</a></li>
-          <li class="{{currentRoute 'signup'}}"><a href="{{pathFor 'signup'}}">Sign Up</a></li>
+          <li class="{{currentRoute 'login'}}"><a href="{{pathFor 'login'}}">Sign In </a></li>
+          <li class="{{currentRoute 'signup'}}"><a href="{{pathFor 'signup'}}">Register</a></li>
         </ul>
         {{/if}}
       </div> <!-- end .navbar-collapse -->
