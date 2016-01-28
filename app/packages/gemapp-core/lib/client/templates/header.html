@@ -1,6 +1,6 @@
 <template name="header">
-  <nav class="navbar navbar-default" role="navigation" style="background-color: rgb(238, 255, 238); border-color: rgb(238, 255, 238); padding-top: 30px; padding-bottom: 40px;">
-    <div class="container">
+  <nav class="navbar navbar-default" role="navigation" style="background-color: rgb(238, 255, 238); border-color: rgb(238, 255, 238); padding-top: 30px; padding-bottom: 10px;">
+    <div class="container" style="width: 1375px">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
@@ -32,11 +32,14 @@
           </li>
         </ul>
         {{else}}
-        
+        <ul class="nav navbar-nav" style="padding-left: 35px; padding-top: 35px;">
+        <h1> G.E.M Movement </h1>
+        </ul>
+
         <ul class="nav navbar-nav navbar-right" style="padding-top:30px" >
           <!--<li>{{> loginButtons align="right"}}</li>-->
-          <li class="{{currentRoute 'login'}}"><a href="{{pathFor 'login'}}">Sign In </a></li>
-          <li class="{{currentRoute 'signup'}}"><a href="{{pathFor 'signup'}}">Register</a></li>
+          <li class="{{currentRoute 'login'}}"><a href="{{pathFor 'login'}}"> <button type="button">Sign In</button> </a></li>
+          <li class="{{currentRoute 'signup'}}"><a href="{{pathFor 'signup'}}"><button type="button">Register</button></a></li>
         </ul>
         {{/if}}
       </div> <!-- end .navbar-collapse -->
