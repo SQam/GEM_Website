@@ -10,11 +10,11 @@ FlowRouter.notFound =
 exposed = FlowRouter.group {}
 
 exposed.route '/',
-  name: 'coming-soon'
+  name: 'landing-page'
   action: ->
     BlazeLayout.render 'layoutDefault',
       top: "header"
-      main: "coming-soon"
+      main: "landing-page"
 
 exposed.route '/login',
   name: 'login'

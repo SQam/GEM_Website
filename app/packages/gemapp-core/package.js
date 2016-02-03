@@ -44,7 +44,7 @@ Package.onUse(function(api) {
     'lib/client/stylesheets/views/public/_login.scss',
     'lib/client/templates/authenticated/dashboard.html',
     'lib/client/templates/authenticated/profile.html',
-    'lib/client/templates/public/coming-soon.html',
+    'lib/client/templates/public/landing-page.html',
     'lib/client/templates/public/introduction-supporter.html',
     'lib/client/templates/public/introduction-youth.html',
     'lib/client/templates/public/not-found.html',
