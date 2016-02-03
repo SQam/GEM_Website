@@ -23,6 +23,20 @@ exposed.route '/login',
       top: "header"
       main: "login"
 
+exposed.route '/introduction-youth',
+  name: 'introduction-youth'
+  action: ->
+    BlazeLayout.render 'layoutDefault',
+      top: "header"
+      main: "introduction-youth"
+
+exposed.route '/introduction-supporter',
+  name: 'introduction-supporter'
+  action: ->
+    BlazeLayout.render 'layoutDefault',
+      top: "header"
+      main: "introduction-supporter"
+
 # TODO: Create real project pages
 exposed.route '/project',
   name: 'project'
