@@ -18,17 +18,15 @@ body {
 
 section {
   margin: auto;
-  width: 65%;
+  width: 55%;
   text-align: center;
 }
 
-
-columnsection{
+columnsection {
   margin: auto;
-  width:95%;
+  width:80%;
   text-align: center;
 }
-
 
 h1 {
   font-size: 45px;
@@ -126,3 +124,55 @@ It handles resizing for Firefox, Chrome and IE.
   height: 100%;
 }
 
+
+
+.BrowseProjects-Container{
+width:1450px; 
+height:175px; 
+background-color: grey;
+border: 2px solid #666;
+margin-top:80px; 
+margin-bottom:200px;
+}
+
+.headerContainer{
+  width:1375px;
+}  
+
+.column-text{
+  padding-right:150px;
+  padding-left:150px;
+  margin-bottom: 30px;
+}
+
+.BrowseProjects-text{
+  text-align:center; 
+  padding-top:35px;
+}
+
+.navbar-styling {
+   background-color: rgb(238, 255, 238);
+   border-color: rgb(238, 255, 238); 
+}
+
+.gemHeading-styling {
+ padding-left: 110px;
+ padding-top: 35px;
+}
+
+.navright-styling {
+  padding-top:30px;
+}
+
+.logo-styling{
+  height: 150px;
+}
+
+.button {
+  padding:5px;
+  background-color: #dcdcdc;
+  border: 1px solid #666;
+  box-shadow: 3px 3px 3px #888888;
+  color:#000;
+  text-decoration:none;
+}
