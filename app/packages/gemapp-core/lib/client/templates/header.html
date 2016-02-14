@@ -1,5 +1,5 @@
 <template name="header">
-  <nav class="navbar navbar-default navbar-styling" role="navigation">
+  <nav class="navbar navbar-default nav-styling" role="navigation">
    <div class="container-fluid" >
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -11,7 +11,8 @@
         <!--<img class="navbar-brand gem-logo-primary" href="{{pathFor 'coming-soon'}}" src="/logo.png" alt="GEM Movement Logo">-->
         <a class="" href="{{pathFor 'landing-page'}}"><img class="navbar-brand logo-styling" href="{{pathFor 'landing-page'}}" src="/logo.png" alt="GEM Movement Logo"> </a>
       </div> <!--end of navbar-header -->
-      <div class="nav navbar-nav gemHeading-styling">
+      
+      <div class="nav navbar-nav">
        <h1> G.E.M Movement </h1>
       </div>
 
@@ -36,7 +37,7 @@
           </ul> 
         {{else}}
 
-         <ul class="nav navbar-nav navbar-right navright-styling">
+         <ul class="nav navbar-nav navbar-right">
           <!--<li>{{> loginButtons align="right"}}</li>-->
           <li class="{{currentRoute 'login'}}"><a href="{{pathFor 'login'}}"> <button class="button">Sign In</button> </a></li>
           <li class="{{currentRoute 'signup'}}"><a href="{{pathFor 'signup'}}"><button class="button">Register</button></a></li>
