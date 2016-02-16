@@ -21,16 +21,6 @@ section {
   text-align: center;
 }
 
-columnsection{
-  margin: auto;
-  width: 80%;
-  text-align: center;
-  h2,p{
-  padding-right:80px;
-  padding-left:80px;
-  }
-}
-
 h1 {
   font-size: 45px;
 }
@@ -127,7 +117,15 @@ It handles resizing for Firefox, Chrome and IE.
   height: 100%;
 }
 
-.BrowseProjects-Container{
+.columnsText-style{
+  text-align:center;
+  h2,p{ 
+  padding-right:80px;
+  padding-left:80px;
+  }
+}
+
+.BrowseProjects{
 height:175px; 
 background-color: grey;
 margin-top:80px; 
@@ -160,4 +158,13 @@ a{
   box-shadow: 3px 3px 3px #888888;
   color:#000;
   text-decoration:none;
+}
+
+@media (max-width: 900px) {
+ .nav-styling h1{
+ font-size: 38px;
+ padding-left:0px;
+ padding-top:0px;
+ text-align:center;}
+ .logo-styling { height: 140px;}
 }
