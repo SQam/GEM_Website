@@ -56,10 +56,14 @@ exposed.route '/signup/:token',
 exposed.route '/recover-password',
   name: 'recoverPassword'
   action: ->
-    BlazeLayour.render 'recoverPassword'
+    BlazeLayout.render 'layoutDefault',
+      top: "header"
+      main: "recoverPassword"
 
 exposed.route '/reset-password/:token',
   name: 'resetPassword'
   action: ->
-    BlazeLayour.render 'resetPassword'
+    BlazeLayout.render 'layoutDefault',
+      top: "header"
+      main: "resetPassword"
     Session.set 'resetPasswordToken', @params.token
