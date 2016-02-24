@@ -117,39 +117,31 @@ It handles resizing for Firefox, Chrome and IE.
   height: 100%;
 }
 
-.columnsText-style{
-  text-align:center;
-  h2,p{ 
-  padding-right:80px;
-  padding-left:80px;
-  }
-}
-
 .BrowseProjects{
-height:175px; 
+height:175px;
 background-color: grey;
 margin-top:80px; 
 margin-bottom:200px;
 text-align:center; 
 a{
-     text-decoration: none;
      color: black;
  }
  h1{ padding-top:55px;}
 }
 
 .nav-styling{
-  padding-top:30px;
   background-color: rgb(238, 255, 238);
   border-color: rgb(238, 255, 238); 
-  h1{
-  padding-left:85px;
-  padding-top:50px;
-  }
+  margin-top: 20px;
+  h1 {
+  text-align:center;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-left:10px;}
 }
 
 .logo-styling{
-  height: 175px;
+  height: 120px;
 }
 
 .button {
@@ -157,14 +149,4 @@ a{
   border: 1px solid #666;
   box-shadow: 3px 3px 3px #888888;
   color:#000;
-  text-decoration:none;
-}
-
-@media (max-width: 900px) {
- .nav-styling h1{
- font-size: 38px;
- padding-left:0px;
- padding-top:0px;
- text-align:center;}
- .logo-styling { height: 140px;}
 }
