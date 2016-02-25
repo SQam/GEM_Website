@@ -10,7 +10,9 @@ Package.onUse(function (api) {
 
   var packages = [
     'standard-app-packages',
-    //'service-configuration',
+    'service-configuration',
+    'spacebars',
+    'reload',
     'meteor-base',
     'mobile-experience',
     'mongo',
@@ -35,18 +37,19 @@ Package.onUse(function (api) {
     'email',
     'mrt:moment',
     'fourseven:scss@3.3.3_3',
-    'pinglamb:bootstrap3',
+    'twbs:bootstrap',
     'random',
     'themeteorchef:jquery-validation',
     'underscore',
     //'meteorhacks:kadira',
     'meteorhacks:fast-render@2.10.0',
     'fastclick',
-    'msavin:mongol@1.4.3',
+    'msavin:mongol@1.5.0',
     'kadira:flow-router',
     'kadira:blaze-layout',
     'arillo:flow-router-helpers',
-    //'aldeed:autoform',
+    'aldeed:autoform@5.7.1',
+    'aldeed:collection2',
     //'particle4dev:upload-avatar',
   ];
 
