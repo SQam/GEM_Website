@@ -17,17 +17,12 @@ body {
 
 section {
   margin: auto;
-  width: 65%;
+  width: 70%;
   text-align: center;
 }
 
 h1 {
   font-size: 45px;
-}
-
-h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
 }
 
 blockquote {
@@ -115,4 +110,38 @@ It handles resizing for Firefox, Chrome and IE.
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.BrowseProjects{
+height:175px;
+background-color: grey;
+margin-top:80px; 
+margin-bottom:200px;
+text-align:center; 
+a{
+     color: black;
+ }
+ h1{ padding-top:55px;}
+}
+
+.nav-styling{
+  background-color: rgb(238, 255, 238);
+  border-color: rgb(238, 255, 238); 
+  margin-top: 20px;
+  h1 {
+  text-align:center;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-left:10px;}
+}
+
+.logo-styling{
+  height: 120px;
+}
+
+.button {
+  padding:5px;
+  border: 1px solid #666;
+  box-shadow: 3px 3px 3px #888888;
+  color:#000;
 }

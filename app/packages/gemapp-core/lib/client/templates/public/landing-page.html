@@ -1,0 +1,29 @@
+<template name="landing-page">
+  <div class="container-fluid" >
+    <div class="jumbotron" title="intro">
+      <p> Global Empowerment Mandala (GEM) is designed to unify young people and support their creative brilliance by providing the tools, guidance and resources they require to take their solutions for peace and make them a reality. One of the tools through which we do this is a social media platform that makes it inspiring and easy for young people to get involved. This virtual hub will be a space dedicated to sharing resources and expressing </p>
+      <h2 class="text-center">How It Works</h2>
+      <div id="containingBlock">
+        <div class="videoWrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/8Z1TptOehAg" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <h2>Youth</h2>
+        <p> We are inviting youth of ages (12-24) who are already engaged may not have access to the toolsand resources they need to be effective. This project is designed to unify young people and support their creative brilliance by providing the tools, guidance and resources they require to take their innovative solutions for peace and make them a reality. <br>Sound like you?</p>
+        <a class="{{currentRoute 'introduction-youth'}}" href="{{pathFor 'introduction-youth'}}"><button class="button"> Get Started </button></a>
+      </div> <!-- end .col-xs-12 -->
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <h2>Supporters</h2>
+        <p>We are inviting pioneering leaders, community mentors, schools, non-profit organizations and eco-conscious companies to join GEM's philanthropic community network. Everyone who joins will be invited to support youth members by offering resources, mentorship, volunteer opportunities and any other gifts they find it within their hearts to provide.</p>
+        <a class="{{currentRoute 'introduction-supporter'}}" href="{{pathFor 'introduction-supporter'}}"><button class="button"> Get Started </button></a>
+      </div> <!-- end .col-xs-12 -->
+    </div> <!-- end of row -->
+    <div class="BrowseProjects">
+      <h1><a class="{{currentRoute 'project'}}" href="{{pathFor 'project'}}"> Browse Projects </a> </h1>
+    </div>
+  </div> <!--end container-->
+</template>
+

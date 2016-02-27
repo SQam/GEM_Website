@@ -10,11 +10,11 @@ FlowRouter.notFound =
 exposed = FlowRouter.group {}
 
 exposed.route '/',
-  name: 'coming-soon'
+  name: 'landing-page'
   action: ->
     BlazeLayout.render 'layoutDefault',
       top: "header"
-      main: "coming-soon"
+      main: "landing-page"
 
 exposed.route '/login',
   name: 'login'
@@ -22,6 +22,20 @@ exposed.route '/login',
     BlazeLayout.render 'layoutDefault',
       top: "header"
       main: "login"
+
+exposed.route '/introduction-youth',
+  name: 'introduction-youth'
+  action: ->
+    BlazeLayout.render 'layoutDefault',
+      top: "header"
+      main: "introduction-youth"
+
+exposed.route '/introduction-supporter',
+  name: 'introduction-supporter'
+  action: ->
+    BlazeLayout.render 'layoutDefault',
+      top: "header"
+      main: "introduction-supporter"
 
 # TODO: Create real project pages
 exposed.route '/project',
