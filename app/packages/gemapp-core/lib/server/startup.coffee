@@ -9,7 +9,8 @@ Meteor.startup(->
   ###
 
   # Define MAIL_URL
-  process.env.MAIL_URL = 'Insert your own MAIL_URL from your email provider here.'
+  # Note: prints to stdout when undefined
+  #process.env.MAIL_URL = 'Insert your own MAIL_URL from your email provider here.'
 
   ###
     Generate Test Accounts

@@ -52,6 +52,7 @@ Package.onUse(function(api) {
   ], 'client');
 
   api.addFiles([
+    'lib/server/methods.coffee',
     'lib/server/publications.coffee',
     'lib/server/startup.coffee',
     'lib/server/email/reset-password.coffee'
