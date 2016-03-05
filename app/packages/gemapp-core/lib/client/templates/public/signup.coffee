@@ -41,15 +41,12 @@ Template.signup.rendered = ->
           if error
             alert error.reason
           else
-            # In order to get our roles working, we needed to create our user
-            # on the server. This is well and good, but this means that we don't
-            # get the nice bonus of Meteor automatically logging in our new user.
-            # To compensate, we can do this manually here. Note: we're making the
-            # assumption that our user exists because we're calling this after
-            # our user was created on the server. If for some reason they were
-            # not created, this will fail. That failure would be rare, but keep
-            # it in mind (e.g. if a server disconnected unexpectedly). Also note
-            # that we're using the email/password combo passed above, but
+            # To get user roles, we need to create users on the server manually.
+            # We need to login users manually here.
+            # Note: we're making the assumption that our user exists because
+            # we're calling this after our user was created on the server. If
+            # for some reason they were not created, this will fail (server
+            # disconnected unexpectedly).
             Meteor.loginWithPassword(user.email, user.password, (error)->
               if error
                 alert error.reason
@@ -60,6 +57,7 @@ Template.signup.rendered = ->
       else
         Meteor.call 'registerUser', user, (error)->
           if error
+            # Display error to user if there was one
             alert error.reason
           else
             Meteor.loginWithPassword(user.email, user.password, (error)->
