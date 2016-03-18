@@ -24,8 +24,6 @@ Meteor.methods(
 
 validBetaToken: (user)->
   # Check the email and token arguments against our expected patterns.
-  # Note: we're using two check's here because we've passed our arguments
-  # as individual variables as opposed to a single object or array.
   check(user,{email: String, password: String, betaToken: String})
 
   # Attempt to find a user with a matching email and token.
