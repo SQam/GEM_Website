@@ -9,13 +9,8 @@
           <span class="icon-bar"></span>
         </button>
         <!--<img class="navbar-brand gem-logo-primary" href="{{pathFor 'coming-soon'}}" src="/logo.png" alt="GEM Movement Logo">-->
-        <a class="" href="{{pathFor 'landing-page'}}"><img class="navbar-brand logo-styling" href="{{pathFor 'landing-page'}}" src="/logo.png" alt="GEM Movement Logo"> </a>
+        <a href="#">Enter</a>
       </div> <!--end of navbar-header -->
-      
-      <div class="nav navbar-nav">
-       <h1> G.E.M Movement </h1>
-      </div>
-
       <div class="collapse navbar-collapse">
         {{#if currentUser}}
          <ul class="nav navbar-nav">
@@ -39,9 +34,10 @@
 
          <ul class="nav navbar-nav navbar-right">
           <!--<li>{{> loginButtons align="right"}}</li>-->
-          <li class="{{currentRoute 'login'}}"><a href="{{pathFor 'login'}}"> <button class="button">Sign In</button> </a></li>
-          <li class="{{currentRoute 'signup'}}"><a href="{{pathFor 'signup'}}"><button class="button">Register</button></a></li>
-         </ul> 
+           <li><a class="" href="{{pathFor 'landing-page'}}"><img class="navbar-brand logo-styling" href="{{pathFor 'landing-page'}}" src="/gemlogo.png" alt="GEM Movement Logo"> </a></li>
+           <li><a href="#">Hug</a></li>
+           <li><a href="#">Share</a></li>
+         </ul>
         {{/if}} <!-- end of if else currentUser -->
       </div> <!-- end .navbar-collapse -->
    </div> <!-- end of container-fluid -->
