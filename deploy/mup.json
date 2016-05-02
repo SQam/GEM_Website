@@ -2,7 +2,7 @@
   // Server authentication info
   "servers": [
     {
-      "host": "104.236.172.83",
+      "host": "45.55.14.77",
       "username": "root",
       "password": "gemwebteam143"
       // or pem file (ssh based authentication)
@@ -22,7 +22,7 @@
   // Install PhantomJS in the server
   "setupPhantom": true,
 
-  // Show a progress bar during the upload of the bundle to the server. 
+  // Show a progress bar during the upload of the bundle to the server.
   // Might cause an error in some rare cases if set to true, for instance in Shippable CI
   "enableUploadProgressBar": true,
 
@@ -35,7 +35,7 @@
   // Configure environment
   "env": {
     "PORT": 8000,
-    "ROOT_URL": "http://104.236.172.83",
+    "ROOT_URL": "http://45.55.14.77",
     "METEOR_ENV": "staging"
   },
 
