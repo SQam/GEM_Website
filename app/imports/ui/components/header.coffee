@@ -1,7 +1,4 @@
-###
-  Controller: Header
-  Template: /client/templates/header.html
-###
+require './header.html'
 
 # Created
 Template.header.created = ->

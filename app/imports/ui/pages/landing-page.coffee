@@ -1,0 +1,1 @@
+require './landing-page.html'
