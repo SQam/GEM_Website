@@ -17,6 +17,7 @@ Meteor.startup(->
     Creates a collection of test accounts automatically on startup.
   ###
 
+  # TODO: Make this a settings file separate from the git repo before deploying to public.
   # Create an array of user accounts.
   users = [
 	#Note: you must delete the users to make the following relevant
