@@ -1,3 +1,5 @@
+require './reset-password.html'
+
 ###
   Controller: Reset Password
   Template: /client/views/public/reset-password.html

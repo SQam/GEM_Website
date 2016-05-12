@@ -7,6 +7,10 @@ require '../../ui/layouts/layout-default.coffee'
 require '../../ui/components/header.coffee'
 require '../../ui/pages/not-found.coffee'
 require '../../ui/pages/landing-page.coffee'
+require '../../ui/pages/login.coffee'
+require '../../ui/pages/recover-password.coffee'
+require '../../ui/pages/signup.coffee'
+require '../../ui/pages/reset-password.coffee'
 
 Accounts.onLogin ->
   if Meteor.isClient

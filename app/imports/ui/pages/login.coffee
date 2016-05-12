@@ -1,3 +1,5 @@
+require './login.html'
+
 ###
   Controller: Login
   Template: /client/views/public/login.html

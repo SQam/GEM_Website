@@ -1,3 +1,5 @@
+require './recover-password.html'
+
 ###
   Controller: Recover Password
   Template: /client/views/public/recover-password.html

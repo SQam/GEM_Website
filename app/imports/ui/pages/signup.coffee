@@ -1,3 +1,5 @@
+require './signup.html'
+
 ###
   Controller: Signup
   Template: /client/views/public/signup.html
