@@ -13,6 +13,7 @@ body {
   font-family: 'Roboto', 'Trebuchet', 'Arial', sans-serif;
   font-size: 20px;
   background-image: url("/background3.png");
+
 }
 
 section {
@@ -80,6 +81,7 @@ button[type="submit"] {
    font-size: 14px;
 }
 
+land
 ::-moz-placeholder {  /* Firefox 19+ */
    font-size: 14px;
 }
@@ -88,64 +90,37 @@ button[type="submit"] {
    font-size: 14px;
 }
 
-/* This section handles the embedded youtube video.
-It handles resizing for Firefox, Chrome and IE.
-*/
-#containingBlock {
-  max-width: 560px;
-  margin-left: auto ;
-  margin-right: auto ;
-  width:100%;
-  margin-bottom:  30px;
-}
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0;
-}
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.grey-font{
+  h1,h2, h3{color:grey;}
+  h3{font-size:25px;}
+  font-variant: small-caps;
+  a{color:grey;}
+  a:link {
+    text-decoration: none;
+  }
 }
 
 .BrowseProjects{
-height:300px;
 background-color: #FF942B;
 margin-top:80px; 
-h1,h2,h3 {color: white;}
+text-align: center;
+h1,h2,h3 {color: white; margin:50px;}
+h3{font-size:20px;}
 }
 
 .nav-styling{
   background-image: url("/background3.png");
   margin-top: 20px;
-  h1 {
-  text-align:center;
-  font-size: 40px;
-  margin-top: 50px;
-  margin-left:10px;}
 }
 
 .logo-styling{
   height: 150px;
 }
 
-.button {
-  padding:5px;
+button {
   border: 1px solid #666;
-  box-shadow: 3px 3px 3px #888888;
-  color:#000;
+  color:white;
+  font-size:0.8em;
+  background-color: indigo;
 }
 
-@media (max-width: 1200px) {
-  .BrowseProjects 
-  {height: 460px;}
-}
-
-@media (max-width: 600px) {
-  .BrowseProjects 
-  {height: 660px;}
-}
