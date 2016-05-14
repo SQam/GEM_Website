@@ -8,7 +8,7 @@ Accounts.onLogin ->
         # To prevent some wierdness redirection to login page
         FlowRouter.go redirect
     else
-      FlowRouter.go FlowRouter.path('dashboard')
+      FlowRouter.go FlowRouter.path('project-menu')
 
 
 # Redirect to login for paths requiring an account
@@ -31,6 +31,13 @@ loggedIn.route '/dashboard',
     BlazeLayout.render 'layoutDefault',
       top: "header"
       main: "dashboard"
+
+loggedIn.route '/project-menu',
+  name: 'project-menu'
+  action: ->
+    BlazeLayout.render 'layoutMenu',
+      top: "header-menu"
+      main: "project-menu"
 
 loggedIn.route '/profile',
   name: 'profile'
