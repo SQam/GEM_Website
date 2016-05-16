@@ -13,7 +13,9 @@ body {
   font-family: 'Roboto', 'Trebuchet', 'Arial', sans-serif;
   font-size: 20px;
   background-image: url("/background3.png");
-
+  a:link{
+  text-decoration:none;
+ }
 }
 
 section {
@@ -91,21 +93,21 @@ land
 }
 
 .grey-font{
-  h1,h2, h3{color:grey;}
-  h3{font-size:25px;}
+  color:grey;
   font-variant: small-caps;
-  a{color:grey;}
-  a:link {
-    text-decoration: none;
-  }
 }
 
 .BrowseProjects{
-background-color: #FF942B;
-margin-top:80px; 
-text-align: center;
-h1,h2,h3 {color: white; margin:50px;}
-h3{font-size:20px;}
+ background-color: #FF942B;
+ margin-top:80px; 
+ text-align: center;
+ color: white;
+ h1,h2,h3{margin:50px;}
+ h3{font-size:20px;}
+ font-variant: none;
+ a{
+ color:white;
+  } 
 }
 
 .nav-styling{
@@ -114,7 +116,8 @@ h3{font-size:20px;}
 }
 
 .logo-styling{
-  height: 150px;
+  height: 120px;
+  padding-left:160px;
 }
 
 button {
@@ -122,5 +125,11 @@ button {
   color:white;
   font-size:0.8em;
   background-color: indigo;
+}
+
+.icons-bar
+{
+  margin-top:50px;
+  padding-left: 1000px;
 }
 

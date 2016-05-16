@@ -1,40 +1,44 @@
 <template name="landing-page">
-  <div class="container-fluid" >
+  <div class="container-fluid grey-font" >
    <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-6">
      <img src="/wheel.png" alt="Wheel image"> 
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-6 grey-font text-center">
-      <h2>Global Empowerment Mandala</h2><h3>inspired youth, global change</h3> <br> 
-      <button> TRY IT NOW </button> <br><br>
-      <button> DISCOVER PROJECTS </button>
+   <div class="col-xs-12 col-sm-6 col-md-6 text-center">
+      <br><h1>Global Empowerment Manadala</h1> 
+      <h3>inspired youth, global change</h3> <br> 
+      <a class="{{currentRoute 'project'}}" href="{{pathFor 'project'}}"><button>BROWSE PROJECTS</button></a>
     </div>
    </div>   
+   <div class="row icons-bar"> 
+    <button>&nbsp;&nbsp;hug&nbsp;&nbsp;</button>
+    <button>share</button>
+   </div>
    <div class="BrowseProjects">
       <div class="row">
         <h1> GIVE ONE DAY </h1> <h2> A Campaign to Support Youth Who are Changing the World </h2>
-        <h3>Imagine what you could accomplish if you had a supportive community and all the resources required to create positive change in the world. <b>What Would You Do?</b> We have constructed a <b>State of the Art</b> social media & crowdfunding platform that makes it easy for the local & global community to make offerings towards youth's servicess projects and personal development. <br><b>Join This Growing Movement for a Flourishing Community & Planet!</b></h3>
+        <h3>Imagine what you could accomplish if you had a supportive community and all the resources required to create positive change in the world. <b>What Would You Do?</b> We have constructed a <b>State of the Art</b> social media & crowdfunding platform that makes it easy for the local & global community to make offerings towards youth's servicess projects and personal development. <br><br><a class="{{currentRoute 'signup'}}" href="{{pathFor 'signup'}}"><b>Join This Growing Movement for a Flourishing Community & Planet!</b></a></h3>
       </div> 
     </div>
-   <div class="row grey-font text-center">
+   <div class="row text-center">
     <h2> Next Level in Crowdfunding</h2><h3>inspired youth, global change</h3><br>
    </div> 
-   <div class="row grey-font">
+   <div class="row">
     <div div class="col-xs-12 col-sm-3 col-md-3">
      <h2>time</h2><img src="/time.png" alt="Clock image"> 
     </div>
     <div div class="col-xs-12 col-sm-3 col-md-3">
-     <h2>professional services</h2><img src="/Pro_services.png" alt="Professional Services Image"> 
+     <h2>professional services</h2><img src="/Pro_services.png" alt="Worker running image"> 
     </div>
     <div div class="col-xs-12 col-sm-3 col-md-3">
-     <h2>materials</h2><img src="/Materials.png" alt="Box Image"> 
+     <h2>materials</h2><img src="/Materials.png" alt="Carton Image"> 
     </div>
     <div div class="col-xs-12 col-sm-3 col-md-3">
      <h2>money</h2><img src="/money.png" alt="Money Image"> 
     </div>
    </div>
-   <div class="row grey-font">
-     <h2>to take youth's creative <img src="/bulb.png" alt="bulb image"> ideas and make them into successful <img src="/apple.png" alt="apple image"> projects!</h2> <br>
+   <div class="row">
+     <h2>to take youth's creative <img src="/bulb.png" alt="bulb image"> ideas and make them into successful <img src="/apple.png" alt="apple image"> projects!</h2><br>
    </div>
   </div> <!--end container-->
 </template>
