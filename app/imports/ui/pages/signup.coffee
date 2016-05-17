@@ -1,4 +1,5 @@
 require './signup.html'
+{ Session } = require 'meteor/session'
 
 ###
   Controller: Signup

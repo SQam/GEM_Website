@@ -1,44 +1,46 @@
 <template name="header">
-  <nav class="navbar navbar-default nav-styling grey-font" role="navigation">
-   <div class="container-fluid" >
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!--<img class="navbar-brand gem-logo-primary" href="{{pathFor 'coming-soon'}}" src="/logo.png" alt="GEM Movement Logo">-->
-        <a href="#">enter</a>
-      </div> <!--end of navbar-header -->
-      <div class="collapse navbar-collapse">
-        {{#if currentUser}}
-         <ul class="nav navbar-nav">
-          <li class="{{isActiveRoute 'dashboard'}}"><a href="{{pathFor 'dashboard'}}">Dashboard</a></li>
-          {{#if isInRole 'admin'}}
-          {{> optRender name ='invitesPageButton'}}
-          {{/if}}
-          {{#if isInRole 'tester'}}
-          <li class="{{isActiveRoute 'profile'}}"><a href="{{pathFor 'profile'}}">Profile</a></li>
-          {{/if}}
-         </ul>
-         <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{currentUser.emails.[0].address}} <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li class="logout"><a href="{{pathFor 'login'}}">Logout</a></li>
+  <div class="container">
+    <nav class="navbar navbar-default nav-styling grey-font" role="navigation">
+      <div class="container-fluid" >
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--<img class="navbar-brand gem-logo-primary" href="{{pathFor 'coming-soon'}}" src="/logo.png" alt="GEM Movement Logo">-->
+          <a href="#">enter</a>
+        </div> <!--end of navbar-header -->
+        <div id="navbar" class="navbar-collapse collapse">
+          {{#if currentUser}}
+            <ul class="nav navbar-nav">
+              <li class="{{isActiveRoute 'dashboard'}}"><a href="{{pathFor 'dashboard'}}">Dashboard</a></li>
+              {{#if isInRole 'admin'}}
+                {{> optRender name ='invitesPageButton'}}
+              {{/if}}
+              {{#if isInRole 'tester'}}
+                <li class="{{isActiveRoute 'profile'}}"><a href="{{pathFor 'profile'}}">Profile</a></li>
+              {{/if}}
             </ul>
-           </li>
-          </ul>
-        {{else}}
-         <ul class="nav navbar-nav navbar-right">
-          <!--<li>{{> loginButtons align="right"}}</li>-->
-           <li><a class="{{isActiveRoute 'login'}}" href="{{pathFor 'landing-page'}}"><img class="navbar-brand logo-styling" href="{{pathFor 'landing-page'}}" src="/gemlogo.png" alt="GEM Movement Logo"> </a></li>
-           <li><a href="#">hug</a></li>
-           <li><a href="#">share</a></li>
-         </ul>
-        {{/if}} <!-- end of if else currentUser -->
-      </div> <!-- end .navbar-collapse -->
-   </div> <!-- end of container-fluid -->
-  </nav>  <!-- end of navbar -->
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{currentUser.emails.[0].address}} <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="logout"><a href="{{pathFor 'login'}}">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+            {{else}}
+            <ul class="nav navbar-nav navbar-right">
+              <!--<li>{{> loginButtons align="right"}}</li>-->
+              <li><a class="{{isActiveRoute 'login'}}" href="{{pathFor 'landing-page'}}"><img class="navbar-brand logo-styling" href="{{pathFor 'landing-page'}}" src="/gemlogo.png" alt="GEM Movement Logo"> </a></li>
+              <li><a href="#">hug</a></li>
+              <li><a href="#">share</a></li>
+            </ul>
+          {{/if}} <!-- end of if else currentUser -->
+        </div> <!-- end .navbar-collapse -->
+      </div> <!-- end of container-fluid -->
+    </nav>  <!-- end of navbar -->
+  </div> <!-- end of container -->
 </template>

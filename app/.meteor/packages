@@ -54,6 +54,7 @@ chriswessels:hammer
 # production
 juliancwirko:postcss@1.0.0-beta.11
 standard-minifier-js
+#standard-minifier-css
 ddp-rate-limiter
 #app-prod-security
 
@@ -80,3 +81,4 @@ fourseven:scss@3.3.3_3
 mrt:moment
 coffeescript
 email
+alanning:roles

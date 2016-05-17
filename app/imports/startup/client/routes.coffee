@@ -1,6 +1,7 @@
 { FlowRouter } = require 'meteor/kadira:flow-router'
 { BlazeLayout } = require 'meteor/kadira:blaze-layout'
 { AccountsTemplates } = require 'meteor/useraccounts:core'
+{ Session } = require 'meteor/session'
 
 # Import to load these templates
 require '../../ui/layouts/layout-default.coffee'
@@ -11,6 +12,7 @@ require '../../ui/pages/login.coffee'
 require '../../ui/pages/recover-password.coffee'
 require '../../ui/pages/signup.coffee'
 require '../../ui/pages/reset-password.coffee'
+require '../../ui/pages/dashboard.coffee'
 
 Accounts.onLogin ->
   if Meteor.isClient
