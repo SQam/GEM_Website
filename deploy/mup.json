@@ -2,7 +2,8 @@
   // Server authentication info
   "servers": [
     {
-      "host": "45.55.14.77",
+      //"host": "45.55.14.77",
+      "host": "gemmovement.org",
       "username": "root",
       "password": "gemwebteam143"
       // or pem file (ssh based authentication)
@@ -35,7 +36,8 @@
   // Configure environment
   "env": {
     "PORT": 8000,
-    "ROOT_URL": "http://45.55.14.77",
+    //"ROOT_URL": "http://45.55.14.77",
+    "ROOT_URL": "http://gemmovement.org",
     "METEOR_ENV": "staging"
   },
 
