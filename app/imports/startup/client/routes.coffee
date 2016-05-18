@@ -13,6 +13,7 @@ require '../../ui/pages/recover-password.coffee'
 require '../../ui/pages/signup.coffee'
 require '../../ui/pages/reset-password.coffee'
 require '../../ui/pages/dashboard.coffee'
+require '../../ui/pages/project-menu.coffee'
 
 Accounts.onLogin ->
   if Meteor.isClient
